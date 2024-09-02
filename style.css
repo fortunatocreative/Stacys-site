@@ -13,15 +13,7 @@
 html {
     font-size: 62.5%;
 }
-.section-heading {
-    font-size: 12rem;
-    font-weight: 900;
-    color:azure;
-    text-align: center;
-    text-transform: capitalize;
-    letter-spacing: .5rem;
-    text-shadow: .3rem .3rem .3rem #000;
-}
+
 /* end common styles */
 
 /*Navbar*/
@@ -98,17 +90,21 @@ html {
     align-items: center;
     justify-content: space-evenly;
 }
-
-.section-1-icons i {
-    font-size: 25rem;
-    color: antiquewhite;
+.section-heading {
+    text-align: center;
+    max-width: 80%;
+    height: auto;
+    top: 50px;
+}
+.section-1-icons i.dog{
     position: absolute;
+    max-width: 80%;
+    height: auto;
     /* hide elemements with scale() */
     transform: translate(-50%,-50%)scale(0);
-    text-shadow: .2rem .2rem .2rem #000;
     transition: transform .3s;
 }
-.section-1-icons i.change {
+.section-1-icons i.dog.change {
     transform: translate(-50%,-50%)scale(1);
     transition: transform .3s .3s;
 }
@@ -377,8 +373,9 @@ html {
         font-size: 9rem;
         margin: .5rem;
     }
-    .section-1-icons {
-        font-size: 25rem;
+    .section-1-icons .dog {
+        width:100%;
+        height: auto;
     }
     .cards-container {
         flex-wrap: wrap;
