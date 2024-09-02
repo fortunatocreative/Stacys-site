@@ -84,30 +84,24 @@ html {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background-color: blueviolet;
+    background-color: rgb(187, 123, 247);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 }
 .section-heading {
-    text-align: center;
     max-width: 80%;
     height: auto;
-    top: 50px;
 }
-.section-1-icons i.dog{
+
+.section-1-icons {
     position: absolute;
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
-    /* hide elemements with scale() */
-    transform: translate(-50%,-50%)scale(0);
-    transition: transform .3s;
 }
-.section-1-icons i.dog.change {
-    transform: translate(-50%,-50%)scale(1);
-    transition: transform .3s .3s;
-}
+
+
 /* end of section 1 */
 
 /* section 2 */
