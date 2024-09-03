@@ -88,20 +88,30 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    
 }
-.section-heading {
-    max-width: 80%;
-    height: auto;
-}
+.section-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
 
-.section-1-icons {
-    position: absolute;
+}
+img.stacy {
     max-width: 100%;
-    height: auto;
+    margin-top: 5px;
+    
 }
-
-
+img.dog {
+    max-width: 100%;
+    margin-top: -25px;
+    
+}
+img.delight{
+    max-width: 100%;
+    margin-top: -50px;
+}
 /* end of section 1 */
 
 /* section 2 */
@@ -363,14 +373,6 @@ html {
 	}
 }
 @media(max-width:1000px){
-    .section-heading {
-        font-size: 9rem;
-        margin: .5rem;
-    }
-    .section-1-icons .dog {
-        width:100%;
-        height: auto;
-    }
     .cards-container {
         flex-wrap: wrap;
     }
