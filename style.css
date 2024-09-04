@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Puppies+Play&display=swap');
 
 /* common styles */
 * {
@@ -13,6 +14,13 @@
 html {
     font-size: 62.5%;
 }
+.heading {
+    font-family: "Puppies Play", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10rem;
+  }
+
 
 /* end common styles */
 
@@ -60,7 +68,7 @@ html {
     height: 6rem;
     background-color: #000;
     position: fixed;
-    top:1rem;
+    top:5rem;
     left: 5rem;
     border-radius: 30rem 30rem 15rem 15rem;
     cursor: pointer;
@@ -73,10 +81,10 @@ html {
 .menu::before {
     content:"";
     width: .3rem;
-    height: 15rem;
+    height: 10rem;
     background-color: #000;
     position: absolute;
-    top:-15rem;
+    top:-5rem;
     left:calc(50% - .15rem);
 }
 /* end Navbar */
@@ -84,7 +92,7 @@ html {
 .section-1 {
     width: 100%;
     height: 100vh;
-    background-color: rgb(187, 123, 247);
+    background-color: rgb(200, 150, 247);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,27 +125,27 @@ img.delight{
 /* section 2 */
 .section-2 {
     width:100%;
-    height:100vh;
-    background-color:#222;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-between;
-    padding: 10rem 0;
+    background-color:#f1ff72;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
 }
+
 .cards-container {
-    display:flex;
-    justify-content:space-evenly;
+    /*display:flex;*/
+
 }
+
 .card {
-    width:30rem;
+    width:50rem;
     background-color:red;
     padding:4rem;
     display:flex;
     flex-direction:column;
-    justify-content:space-between;
     align-items: center;
     box-shadow: 1rem 1rem 1rem #000; 
-    position: relative;
     transform: rotateY(20deg)skew(-2deg);
     transition: transform 0.5s, box-shadow 0.5s;
 }
@@ -181,20 +189,10 @@ img.delight{
     margin:2rem;
     text-shadow: 0.15rem 0.15rem 0.15rem #000;
 }
-.card-btn {
-    width:70%;
-    background-color: #111;
-    color:#888;
-    border-radius: 5rem;
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 0.2rem;
-    text-transform: capitalize;
-    border: none;
-    padding: 0.5rem 0;
-    cursor: pointer;
-    box-shadow: -0.2rem -0.2rem -0.2rem #111;
+.card-text{
+    font-size: 2rem;
 }
+
 /* end section 2 */
 
 /* section 3 */
@@ -202,6 +200,7 @@ img.delight{
     background-color: #000;
     padding: 5rem 0;
 }
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -209,6 +208,7 @@ img.delight{
     justify-content: space-evenly;
     margin-top: 10rem;
 }
+
 .gallery-link {
     position: relative;
 }
@@ -292,10 +292,12 @@ img.delight{
     visibility: hidden;
     transition: opacity 0.3s;
 }
+@media(hover: hover) and (pointer: fine) {
 .gallery-link:hover .food-description {
     opacity: 1;
     visibility: visible;
     transition: opacity 1s 1s;
+}
 }
 /* end section 3 */
 
@@ -351,6 +353,39 @@ img.delight{
 /* end section 4 */
 
 /* Responsive */
+/* ----------- iPhone X ----------- */
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    
+    .section-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+    }
+    img.stacy {
+        max-width: 100%;
+        margin-top: 5px;
+        
+    }
+    img.dog {
+        max-width: 100%;
+        margin-top: -25px;
+        
+    }
+    img.delight{
+        max-width: 100%;
+        margin-top: -50px;
+    }
+    /* end of section 1 */
+}
+
 @media (max-width:1400px) {
 	html {
 	  font-size:50%;
@@ -393,17 +428,33 @@ img.delight{
   .navbar-link span{
     font-size:2rem;
   }
+  
 }
 @media(max-width:700px){
-	.section-heading {
-	  font-size:7rem;
-	  margin: 0 10rem;
-	}
-	.section-1-icons i {
-	  font-size:20rem;
-	}
+    .section-heading{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    
+    }
+    img.stacy {
+        max-width: 100%;
+        margin-top: 5px;
+        
+    }
+    img.dog {
+        max-width: 100%;
+        margin-top: -25px;
+        
+    }
+    img.delight{
+        max-width: 100%;
+        margin-top: -50px;
+    }
+	
 	.menu {
-	  left:20rem;
+	  left:10rem;
 	}
 	.section-4 {
 	  height:40rem;
