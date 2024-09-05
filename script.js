@@ -4,5 +4,3 @@ document.querySelector('.menu').addEventListener
         item.classList.toggle('change')
     })
 })
-
-

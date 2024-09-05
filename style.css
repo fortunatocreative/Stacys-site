@@ -18,7 +18,9 @@ html {
     font-family: "Puppies Play", system-ui;
     font-weight: 400;
     font-style: normal;
-    font-size: 10rem;
+    font-size: 20rem;
+    text-align: center;
+    color:#000
   }
 
 
@@ -140,7 +142,7 @@ img.delight{
 }
 
 .card {
-    width:50rem;
+    width:80vw;
     background-color:#9900FF;
     padding:4rem;
     display:flex;
@@ -179,11 +181,14 @@ img.delight{
 }
 
 .bone {
-    font-size: 8rem;
+    font-size: 10rem;
     color:#f0ed56
 }
 .card-text{
     font-size: 3rem;
+    text-indent: 30px;
+    text-align: justify;
+    color:#000;
 }
 
 /* end section 2 */
