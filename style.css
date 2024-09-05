@@ -199,7 +199,14 @@ img.delight{
     background-color: #9900FF;
     padding: 5rem 0;
 }
-
+.food-text{
+    font-size: 3rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    text-indent: 30px;
+    text-align: justify;
+    color:#000;
+}
 .gallery {
     display: flex;
     flex-wrap: wrap;
