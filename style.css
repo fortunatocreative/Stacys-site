@@ -244,11 +244,11 @@ img.delight{
 }
 
 .gallery-link:hover::after{
-    width: 90%;
+    width: 100%;
 }
 
 .food-img {
-    width:24vw;
+    width:25vw;
     height:15vw;
     object-fit: cover;
     box-shadow: .3rem .3rem .1rem #b514dd, 
@@ -290,7 +290,7 @@ img.delight{
     left: 2rem;
     width:70%;
     font-size: 1.5rem;
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
     color: #fff;
