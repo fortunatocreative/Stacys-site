@@ -141,6 +141,7 @@ img.delight{
 
 }
 
+
 .card {
     width:80vw;
     background-color:#9900FF;
@@ -180,8 +181,16 @@ img.delight{
     transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
 }
 
-.bone {
+.signature {
+    font-family: "Puppies Play", system-ui;
+    font-weight: 400;
+    font-style: normal;
     font-size: 10rem;
+    color:#000
+}
+
+.bone {
+    font-size: 15rem;
     color:#f0ed56
 }
 .card-text{
