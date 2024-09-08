@@ -238,17 +238,19 @@ img.delight{
 .gallery-link {
     position: relative;
 }
+/*
 .gallery-link::before {
     content: "";
     position: absolute;
-    top:2vw;
-    left: 80%;
-    width: .2rem;
+    top:1vw;
+    left: 90%;
+    width: .8rem;
     height: 0;
     background-color: #fff;
-    transition: height 0.5s;
+    transition: height 0.s;
     z-index: 10;
 }
+    */
 .gallery-link:hover::before {
     height: 80%;
 }
@@ -264,7 +266,7 @@ img.delight{
 }
 
 .gallery-link:hover::after{
-    width: 100%;
+    width: 90%;
 }
 
 .food-img {
@@ -335,7 +337,7 @@ img.delight{
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 1rem 0;
+    padding: 5rem 0;
     position: relative;
 }
 
@@ -366,6 +368,7 @@ img.delight{
     font-weight: 700;
     letter-spacing: 0.1rem;
     color: #f0ed56;
+    margin-bottom:10px;
 }
 .signup-form-btn{
     position: relative;
@@ -373,6 +376,9 @@ img.delight{
     height:4rem;
     background-color: #b514dd;
     color: #000;
+}
+.signup-btn-form i {
+  color:red;
 }
 .copyright {
     position: absolute;
@@ -485,13 +491,13 @@ img.delight{
 	  left:10rem;
 	}
 	.section-4 {
-	  height:40rem;
+	  height:50rem;
 	  flex-direction:column;
 	  justify-content:flex-start;
 	  align-items:center;
 	}
 	.section-4-text {
-	  margin-bottom:8rem;
+	  margin-bottom:2rem;
 	}
 }
 @media(max-width:550px){
