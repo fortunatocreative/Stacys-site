@@ -107,6 +107,8 @@ html {
 img.stacy {
     max-width: 100%;
     margin-top: 5px;
+    animation: float 3s linear infinite;
+    animation-direction: alternate;
     
 }
 img.dog {
@@ -117,7 +119,35 @@ img.dog {
 img.delight{
     max-width: 100%;
     margin-top: -50px;
+    animation: floatAgain 3s linear infinite;
+    animation-direction: alternate;
 }
+@keyframes float {
+    from { transform: rotate(5deg);}
+
+    to {transform: rotate(-5deg);}
+    
+}
+@keyframes floatAgain {
+    from { transform: rotate(-5deg);}
+
+    to {transform: rotate(5deg);}
+    
+}
+/*
+h1 {
+    color:white;
+    animation: float 3s linear infinite;
+    animation-direction: alternate;
+}
+
+@keyframes float {
+    from { transform: rotate(5deg);}
+
+    to {transform: rotate(-5deg);}
+    
+}
+    */
 /* end of section 1 */
 
 /* section 2 */
