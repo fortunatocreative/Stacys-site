@@ -4,15 +4,23 @@ from django.shortcuts import render
 
 def home(request):
     return render(request, 'home.html', {})
-'''
- def contact(request):
+
+def contact(request):
     if request.method == "POST":
-        #do something
         message_name = request.POST['message-name']
         message_email = request.POST['message-email']
         message = request.POST['message']
-        return render(request, 'contact.html', {'message_name' : message_name})
+
+        return render(request, 'home.html', {'message_name' : message_name })
+        '''
+        #send Email function
+        send_mail (
+            message_name, #subject
+            message, 
+            message_email,
+            ['orders@stacysdoggiedelights.com'],
+            fail_silently=False,
+        )
+        '''
     else:
-        #do something else
-        return render(request, 'contact.html', {})
-    '''
+        return render(request, 'home.html', {})

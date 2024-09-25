@@ -8,7 +8,7 @@
     <title>Stacy's Doggie Delights </title>
     <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="{% static 'mainsite/js/vendor/modernizr-2.6.2.min.js' %}"></script>
 </head>
 <body>
     <!--Navbar-->
@@ -37,9 +37,9 @@
         <!-- section 1-->
          <section class="section-1">
             <div class="section-heading">
-                <img class="stacy" src="images/stacys_text.png">
-        <img class="dog" src="images/stacys_images.png">
-        <img class="delight" src="images/Doggie_text.png">
+		    <img class="stacy" src="{% static 'mainsite/images/stacys_text.png' %}">
+		    <img class="dog" src="{% static 'mainsite/images/stacys_images.png' %}">
+		    <img class="delight" src="{% static 'mainsite/images/Doggie_text.png' %}">
             </div>
             
          </section>
@@ -74,7 +74,7 @@
                 <p class="food-text">*Treats are meant to be given in moderation and always check with your vet for any food allergies. We will be updating our treat menu every so often, so be sure to check back weekly for any new treats that may be available!</p>
             <div class="gallery">
                 <a class="gallery-link">
-                    <img src="images/treats/image1.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image1.png' %}" class="food-img" />
                     <h3 class="food-name">7-Mix Veggie cupcakes</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -82,7 +82,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image2.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image2.png' %}" class="food-img" />
 		    <h3 class="food-name">Yogurt-banana-honey<br> frozen Delights</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -90,7 +90,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image3.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image3.png' %}" class="food-img" />
                     <h3 class="food-name">Peanut Butter Pumpkin Delights</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -98,7 +98,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image4.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image4.png' %}" class="food-img" />
                     <h3 class="food-name">Peanut Butter Sammies</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -106,7 +106,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image5.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image5.png' %}" class="food-img" />
                     <h3 class="food-name">Blueberry Chip Delights</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -114,7 +114,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image6.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image6.png' %}" class="food-img" />
                     <h3 class="food-name">Pumpkin Pear Delights</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -122,7 +122,7 @@
                     </p>
                 </a>
                 <a class="gallery-link" title="Order Now">
-                    <img src="images/treats/image7.png" class="food-img" />
+			<img src="{% static 'mainsite/images/treats/image7.png' %}" class="food-img" />
                     <h3 class="food-name">Sweet Potato Coconut Oil Delights</h3>
                     <p class="food-description">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
@@ -138,12 +138,16 @@
 		    <div class="section-4-text">
 			<h2 class="section-4-heading">Contact Us</h2>
 			<p class="section-4-paragraph">Enter your email and question here,<br> I will respond as soon as I can, Thanks! </p>
-		    </div>
+       				<!-- Thank you model window -->
+			<h2 class="thankyou">Thank you {{ message_name }}</h2>
+				<!-- end model window -->
+            </div>
             
-            <form class="signup-form">
-                <input type="text" class="signup-form-input" placeholder="Enter Your Name">
-                <input type="email" class="signup-form-input" placeholder="Enter Your Email">
-		<textarea class="signup-form-textarea" placeholder="Enter Question or Order Info"></textarea>
+            <form class="signup-form" action="{% url 'contact' %}" method="post">
+ 			{% csrf_token %}
+                <input type="text" name="message-name" class="signup-form-input" placeholder="Enter Your Name">
+                <input type="email" name="message-email" class="signup-form-input" placeholder="Enter Your Email">
+		<textarea name="message" class="signup-form-textarea" placeholder="Enter Question or Order Info"></textarea>
                 <button type="submit" class="signup-form-btn">
                     Submit
                 </button>
@@ -158,6 +162,6 @@
       
       </div>
       
-    <script src="script.js"></script>
+    <script src="{% static 'mainsite/js/script.js' %}"></script>
 </body>
 </html>
