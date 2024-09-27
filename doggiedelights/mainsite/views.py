@@ -17,7 +17,7 @@ def contact(request):
             message_name, #subject
             message,
             message_email,
-            ['dave.vineis@gmail.com'],
+            ['orders@stacysdoggiedelights.com'],
             fail_silently=False,
         )
         return render(request, 'thankyou.html', {'message_name' : message_name })

@@ -142,17 +142,17 @@ EMAIL_HOST_USER = 'dave.vineis@gmail.com'
 ####USe enviromental variable for password######
 EMAIL_HOST_PASSWORD = 'password'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_USE_SSL = True
 '''
 # Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.your-email-provider.com'
-EMAIL_PORT = 587
+EMAIL_HOST = 'stacysdoggiedelights.com'
+EMAIL_PORT = 465
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False
+EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'orders@stacysdoggiedelights.com'
 #EMAIL_HOST_PASSWORD = 'your-email-App-password'
-EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
+EMAIL_HOST_PASSWORD = os.environ.get("DOGGIE_HOST_PASSWORD")
 
 #development email server test
 #python -m smtpd -n -c DebuggingServer localhost:1025
