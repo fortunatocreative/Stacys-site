@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv = "refresh" content = "8; url = http://127.0.0.1:8000/" />
+    <title>Stacy's Doggie Delights </title>
+    <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar target">
+        <a href="#home" class="navbar-link">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="#about" class="navbar-link">
+            <i class="fas fa-address-card"></i>
+            <span>About</span>
+        </a>
+        <a href="#treats" class="navbar-link">
+            <i class="fas fa-bone"></i>
+            <span>Treats</span>
+        </a>
+        <a href="#contact" class="navbar-link">
+            <i class="fas fa-blender-phone"></i>
+            <span>Contact</span>
+        </a>
+    </nav>
+    <div class="menu target"></div>
+    <!--End of Navbar-->
+    <div id="home"></div>
+    <div class="container">
+        <!-- section 1-->
+         <section class="section-1">
+                {% if message_name %}
+			        <h1 class="thankyou">Thank you {{ message_name }}! we
+                        received your email, I will
+                        get back to you soon!!!</h1>
+				{% endif %}
+
+            <div class="section-heading">
+		    <img class="stacy" src="{% static 'mainsite/images/stacys_text.png' %}">
+		    <img class="dog" src="{% static 'mainsite/images/stacys_images.png' %}">
+		    <img class="delight" src="{% static 'mainsite/images/Doggie_text.png' %}">
+            </div>
+            
+         </section>
+         <!-- end of section 1-->
+           
+      
+      </div>
+      
+    <script src="{% static 'mainsite/js/script.js' %}"></script>
+<script src="{% static 'mainsite/js/vendor/modernizr-custom.js' %}"></script>
+
+</body>
+</html>

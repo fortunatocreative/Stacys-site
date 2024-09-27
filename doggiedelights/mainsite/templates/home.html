@@ -8,7 +8,7 @@
     <title>Stacy's Doggie Delights </title>
     <link rel="stylesheet" href="{% static 'mainsite/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script src="{% static 'mainsite/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+    
 </head>
 <body>
     <!--Navbar-->
@@ -139,9 +139,7 @@
 			<h2 class="section-4-heading">Contact Us</h2>
 			<p class="section-4-paragraph">Enter your email and question here,<br> I will respond as soon as I can, Thanks! </p>
        				<!-- Thank you model window -->
-			<h2 class="thankyou">Thank you {{ message_name }}</h2>
-				<!-- end model window -->
-            </div>
+				            </div>
             
             <form class="signup-form" action="{% url 'contact' %}" method="post">
  			{% csrf_token %}
@@ -152,8 +150,8 @@
                     Submit
                 </button>
             </form>
-            <p class="copyright"></p>
-            Stacy's Doggie Delights
+            <p class="copyright">
+            Stacy's Doggie Delights &copy; 2024
         </p>
             
             </section>
@@ -161,7 +159,7 @@
    
       
       </div>
-      
+      <script src="{% static 'mainsite/js/vendor/modernizr-custom.js' %}"></script>
     <script src="{% static 'mainsite/js/script.js' %}"></script>
 </body>
 </html>
