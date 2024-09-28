@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0np@*r+yu!p!$&!pe^b$#c4h!4v7x2&7k9lgll!41x4j+p-bx-'
+SECRET_KEY = os.environ.get("DOGGIE_SECRET_KEY") 
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['stacysdoggiedelights.com']
 
 
 # Application definition
@@ -117,16 +117,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'static'),
+#]
 
 # Namecheap static files location
-'''
-STATIC_ROOT = '/home/koda/Documents/Stacys-site/doggiedelights/static/'
+
+STATIC_ROOT = '/home/fortbwxt/stacysdoggiedelights.com/static/'
 MEDIA_ROOT = '/media'
 MEDIA_URL = 'media/'
-'''
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
@@ -134,21 +134,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ### Setup Email ####
-'''
-#setup email service for production
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'dave.vineis@gmail.com'
-####USe enviromental variable for password######
-EMAIL_HOST_PASSWORD = 'password'
-EMAIL_USE_TLS = True
-EMAIL_USE_SSL = True
-'''
-# Email Settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'stacysdoggiedelights.com'
 EMAIL_PORT = 465
-EMAIL_USE_TLS = True
+EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'orders@stacysdoggiedelights.com'
 #EMAIL_HOST_PASSWORD = 'your-email-App-password'
