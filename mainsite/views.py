@@ -12,13 +12,12 @@ def contact(request):
         message_email = request.POST['message-email']
         message = request.POST['message']
 
+        mail_message = "Name: " + f"{message_name}\n" + "Email: " + f"{message_email}\n" + "Message: " + message
         #send Email function
         send_mail (
-            message_name, #subject
-            message,
-            message_email,
+            'New Web Order', mail_message,
+            'reply@stacysdoggiedelights.com', #from email
             ['orders@stacysdoggiedelights.com'],
-            fail_silently=False,
         )
         return render(request, 'thankyou.html', {'message_name' : message_name })
 
